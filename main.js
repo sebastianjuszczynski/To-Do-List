@@ -9,7 +9,7 @@
     }
     const removeTask = (index) => {
         tasks.splice(index, 1);
-                render();
+        render();
     }
     const toggleTaskDone = (index) => {
         tasks[index].done = !tasks[index].done;
@@ -30,7 +30,7 @@
             })
         })
     }
-    
+
     const render = () => {
         let htmlString = "";
 
@@ -53,7 +53,7 @@
         const newTaskContent = newTaskElement.value.trim();
         if (newTaskContent === "") {
             return;
-        } else  {
+        } else {
             addNewTask(newTaskContent);
             newTaskElement.value = "";
         }
