@@ -1,10 +1,11 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
         render();
     }
     const removeTask = (index) => {
@@ -37,7 +38,7 @@
         for (const task of tasks) {
             htmlString += `
             <li ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-            <button class="container__tasks__done js-done">✔️</button>
+            <button class="container__tasks__done js-done">${task.done ? "✔️" : ""}</button>
             <button class="container__tasks__remove js-remove">🗑️</button>
             ${task.content}
             </li><hr class="line"></hr>
@@ -59,7 +60,7 @@
         }
         newTaskElement.focus();
     };
-    
+
 
     const init = () => {
         render();
