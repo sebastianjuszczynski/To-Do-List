@@ -101,9 +101,12 @@ body {
 }
 
 .container__tasks__done {
+    width: 30px;
+    height: 30px;
     background-color: hsl(120, 100%, 25%);
     font-weight: bold;
-    padding: 5px;
+    margin-right: 5px;
+    padding: 5px; 
     border: none;
     transition: 0.3s;
 }
@@ -113,9 +116,12 @@ body {
 }
 
 .container__tasks__remove {
+    width: 30px;
+    height: 30px;
     background-color: hsl(0, 100%, 40%);
     font-weight: bold;
-    padding: 5px;
+    margin-right: 5px;
+    padding: 5px; 
     border: none;
     transition: 0.3s;
 }
@@ -127,10 +133,41 @@ body {
 .container__tasks li {
     background-color: #fff;
     padding: 10px 10px 0 10px;
+    display: flex;
+    align-items: center;
+   
 }
 
 .line {
     width: 95%;
     border: 1px solid #eee;
     margin: 10px;
+}
+.buttons__container {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+}
+.hideButton {
+    flex-basis: 30%;
+    align-self: flex-end;
+    border: none;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 1px #ccc;
+    padding: 20px;
+}
+.allDone {
+    flex-basis: 30%;
+    align-self: flex-end;
+    border: none;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 1px #ccc;
+    padding: 20px;
+}
+.buttons__container__h2 {
+    flex-basis: 40%;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 1px #ccc;
+    padding: 20px;
+    margin-bottom: 1px;
 }
