@@ -27,6 +27,13 @@
         ];
         render();
     }
+    const markAllTasksDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    }
 
     const bindEvents = () => {
         const doneButtons = document.querySelectorAll(".js-done");
@@ -77,6 +84,8 @@
         render();
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
+        const allTasksDone = document.querySelector(".js-allDone");
+        allTasksDone.addEventListener("click", markAllTasksDone);
     };
     init();
 }
