@@ -1,5 +1,6 @@
 {
     let tasks = [];
+    let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent) => {
         tasks = [
@@ -34,6 +35,10 @@
         }));
         render();
     }
+    const toggleHideDoneTasks = () => {
+        hideDoneTasks = !hideDoneTasks;
+        render();
+    }
 
     const bindEvents = () => {
         const doneButtons = document.querySelectorAll(".js-done");
@@ -55,11 +60,11 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
+            <li class="tasks__item ${task.done && hideDoneTasks ? " tasks__item--hidden" : ""}">
             <button class="container__tasks__done js-done">${task.done ? "✔️" : " "}</button>
             <button class="container__tasks__remove js-remove">🗑️</button>
             ${task.content}
-            </li><hr class="line"></hr>
+            </li>
             `;
         };
         document.querySelector(".js-tasksList").innerHTML = htmlString;
@@ -86,6 +91,8 @@
         form.addEventListener("submit", onFormSubmit);
         const allTasksDone = document.querySelector(".js-allDone");
         allTasksDone.addEventListener("click", markAllTasksDone);
+        const hideButton = document.querySelector(".js-hideButton");
+        hideButton.addEventListener("click", toggleHideDoneTasks);
     };
     init();
 }

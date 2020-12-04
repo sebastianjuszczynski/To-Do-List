@@ -130,12 +130,16 @@ body {
     background-color: hsl(0, 100%, 50%);
 }
 
-.container__tasks li {
+.tasks__item {
     background-color: #fff;
     padding: 10px 10px 0 10px;
     display: flex;
     align-items: center;
-   
+    border-bottom: 2px solid #eee;
+    margin-bottom: 5px;
+}
+.tasks__item--hidden {
+    display: none;
 }
 
 .line {
