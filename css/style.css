@@ -152,31 +152,50 @@ body {
 .buttons__container {
     display: flex;
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto 0 auto;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 1px #ccc;
+}
+
+.buttons__container__header {
+    display: flex;
+    flex-basis: 100%
+}
+
+.buttons {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hideButton {
-    flex-basis: 30%;
-    align-self: flex-end;
+    background: transparent;
+    color: teal;
     border: none;
-    background-color: #fff;
-    box-shadow: 1px 1px 3px 1px #ccc;
-    padding: 20px;
+    margin: 0 20px 0 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s;
+}
+
+.hideButton:hover {
+    color: hsl(180, 100%, 30%);
 }
 
 .allDone {
-    flex-basis: 30%;
-    align-self: flex-end;
+    background: white;
+    color: teal;
     border: none;
-    background-color: #fff;
-    box-shadow: 1px 1px 3px 1px #ccc;
-    padding: 20px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s;
+}
+
+.allDone:hover {
+    color: hsl(180, 100%, 30%);
 }
 
 .buttons__container__h2 {
-    flex-basis: 40%;
     background-color: #fff;
-    box-shadow: 1px 1px 3px 1px #ccc;
     padding: 20px;
     margin-bottom: 1px;
+    margin-top: 0;
 }
