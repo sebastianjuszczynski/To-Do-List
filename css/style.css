@@ -8,4 +8,129 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #eee;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container__header {
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+.container__h2 {
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 1px 1px 3px 1px #ccc;
+    padding: 20px;
+    margin-bottom: 1px;
+}
+
+.container__form {
+    display: flex;
+    align-items: space-between;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 1px #ccc;
+    width: 100%;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .container__form {
+        width: 100%;
+    }
+    .container__header {
+        align-self: center;
+    }
+    .container__h2 {
+        text-align: center;
+    }
+}
+
+.form__input {
+    flex-basis: 70%;
+    margin-right: 10px;
+    border: 2px solid #eee;
+    padding: 10px;
+}
+
+.form__button {
+    background-color: teal;
+    color: #fff;
+    flex-basis: 30%;
+    border: none;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .container__form {
+        flex-wrap: wrap;
+    }
+    .form__input {
+        flex-basis: 100%;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .form__button {
+        flex-basis: 100%;
+        padding: 10px;
+    }
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.container__tasks {
+    align-self: flex-start;
+    list-style: none;
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 1px 1px 3px 1px #ccc;
+    margin: 0;
+}
+
+.container__tasks__done {
+    background-color: hsl(120, 100%, 25%);
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    transition: 0.3s;
+}
+
+.container__tasks__done:hover {
+    background-color: hsl(120, 100%, 30%);
+}
+
+.container__tasks__remove {
+    background-color: hsl(0, 100%, 40%);
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    transition: 0.3s;
+}
+
+.container__tasks__remove:hover {
+    background-color: hsl(0, 100%, 50%);
+}
+
+.container__tasks li {
+    background-color: #fff;
+    padding: 10px 10px 0 10px;
+}
+
+.line {
+    width: 95%;
+    border: 1px solid #eee;
+    margin: 10px;
 }

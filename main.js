@@ -37,10 +37,10 @@
         for (const task of tasks) {
             htmlString += `
             <li ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-            <button class="js-done">✔️</button>
-            <button class="js-remove">🗑️</button>
+            <button class="container__tasks__done js-done">✔️</button>
+            <button class="container__tasks__remove js-remove">🗑️</button>
             ${task.content}
-            </li>
+            </li><hr class="line"></hr>
             `;
         };
         document.querySelector(".js-tasksList").innerHTML = htmlString;
