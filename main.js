@@ -59,6 +59,7 @@
         }
         newTaskElement.focus();
     };
+    
 
     const init = () => {
         render();
