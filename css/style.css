@@ -159,13 +159,13 @@ body {
 
 .buttons__container__header {
     display: flex;
-    flex-basis: 100%
+    flex-basis: 100%;
+    flex-wrap: wrap;
 }
 
 .buttons {
     flex-basis: 70%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
 }
 
@@ -174,7 +174,6 @@ body {
     color: teal;
     border: none;
     margin: 0 20px 0 0;
-    border-bottom: 1px solid transparent;
     transition: color 0.3s;
 }
 
@@ -186,7 +185,6 @@ body {
     background: white;
     color: teal;
     border: none;
-    border-bottom: 1px solid transparent;
     transition: color 0.3s;
 }
 
@@ -199,4 +197,28 @@ body {
     padding: 20px;
     margin-bottom: 1px;
     margin-top: 0;
+}
+
+@media (max-width: 767px) {
+    .buttons__container {
+        width: 100%;
+    }
+    .buttons {
+        flex-basis: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .buttons__container__h2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .hideButton {
+        flex-basis: 100%;
+        margin: 0 0 10px 0;
+    }
+    .allDone {
+        flex-basis: 100%;
+        margin: 0 0 10px 0;
+    }
 }
