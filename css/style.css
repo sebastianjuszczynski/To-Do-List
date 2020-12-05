@@ -187,6 +187,7 @@ body {
     border: none;
     transition: color 0.3s;
 }
+
 .allDone:disabled {
     color: #ccc;
 }

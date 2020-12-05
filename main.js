@@ -59,10 +59,6 @@
         });
     };
 
-
-
-
-
     const renderButtons = () => {
         const buttonsElement = document.querySelector(".js-buttons");
 
@@ -94,8 +90,6 @@
         if (hideButton) {
             hideButton.addEventListener("click", toggleHideDoneTasks);
         }
-
-
     };
 
     const renderHTML = () => {
