@@ -187,6 +187,9 @@ body {
     border: none;
     transition: color 0.3s;
 }
+.allDone:disabled {
+    color: #ccc;
+}
 
 .allDone:hover {
     color: hsl(180, 100%, 30%);
