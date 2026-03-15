@@ -1,5 +1,7 @@
 # To-Do List (Vanilla JavaScript) 📝
 
+![Restaurant Website Screenshot](./1.png)
+
 A simple task management application built with **HTML, CSS and Vanilla JavaScript**.
 
 This project was created to practice fundamental frontend development concepts such as DOM manipulation, event handling, and dynamic rendering of content.
