@@ -12,13 +12,6 @@ This project was created to practice fundamental frontend development concepts s
 
 ---
 
-## Preview
-
-*(Optional: add a screenshot of the application here)*
-
-![App Screenshot](./screenshot.png)
-
----
 
 # Project Overview
 
